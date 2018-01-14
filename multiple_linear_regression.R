@@ -1,6 +1,5 @@
 # Multiple Linear Regression
 
-# Importing the dataset
 dataset = read.csv('50_Startups.csv')
 
 # Encoding categorical data
@@ -29,7 +28,7 @@ regressor = lm(formula = Profit ~ .,
 #Predicting the test set results 
 y_pred = predict(regressor, newdata = test_set)
 
-#Building the model using backward elimination
+#Building the model using backward elimination 
 regressor = lm(formula = Profit ~ R.D.Spend + Administration + Marketing.Spend + State,
                data = dataset)
 summary(regressor)
